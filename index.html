@@ -143,7 +143,7 @@
         </div>
         <div class="row ">
           <div class="col-md-6">
-            <div class="alert alert-warning alert-dismissible fade show d-none my-alert" role="alert">
+            <div class="alert alert-succes alert-dismissible fade show d-none my-alert" role="alert">
               <strong>Terimakasih...!</strong> Telah mengirim pesan.
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
@@ -195,7 +195,7 @@
         // tampilkan tombol loading, hilangkan tombol kirim
         btnLoading.classList.toggle('d-none');
         btnKirim.classList.toggle('d-none');
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
           .then((response) => {
             // tampilkan tombol kirim, hilangkan tombol loading
             btnLoading.classList.toggle('d-none');
@@ -204,9 +204,9 @@
             myAlert.classList.toggle('d-none');
             // reset formnya
             form.reset();
-            console.log('Success!', respons);
-        })
-          .catch(error) => console.error('Error!', error.message))
+            console.log('Succes!',response);
+          })
+          .catch(error => console.error('Error!', error.message))
       });
     </script>
   </body>
